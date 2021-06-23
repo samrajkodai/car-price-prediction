@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'main4.css'%}">
+    <title>Car Price</title>    
+</head>
+<body>
+    <h1><b>Welcome To ShowRoom</b></h1>
+    {%load static%}
+    
+    <img src="{%static '14.jpg'%}" class="d-block w-100" alt="...">
+    
+    <form action="{%url 'result'%}" >
+        {%csrf_token%}
+        <h4>What is the current price of the car?(in lakhs)</h4>
+        <input type="text" name="Present_Price"  required='required' class="btn btn-outline-warning">
+        <br>
+        <br>
+        <h4>How many Kilo Meters Drived?</h4>
+        <input type="text" name="Kms_Driven" required='required' class="btn btn-outline-warning">
+        <br>
+        <br>
+        <h4>How much Owners previously had this car?</h4>
+        <input type="text" name="Owner"  required='required' class="btn btn-outline-warning">
+        <br>
+        <br>
+        <h4>Released year?</h4>
+        <input type="text" name="no_year"  required='required' class="btn btn-outline-warning">
+        <br>
+        <br>
+        <h4>Fuel type?</h4>
+       
+        <select name="Fuel_Type_Petrol" id=""  required='required' class="btn btn-info">
+            <option value="petrol">petrol</option>
+            <option value="Diesel">Diesel</option>
+        </select>
+        <br>
+        <br>
+        <h4>Dealer or indidual?</h4>
+        <select name="Seller_Type_Individual" id=""  required='required' class="btn btn-success">
+            <option value="Dealer">dealer</option>
+            <option value="individual">individual</option>
+        </select>
+        <br>
+        <br>
+        <h5>Transmission Type</h5>
+        
+        <select name="Transmission_Mannual" id=""  required='required' class="btn btn-danger" >
+            <option value="Mannual">Mannual</option>
+            <option value="Automatic">Automatic</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
